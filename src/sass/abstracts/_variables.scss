@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Nunito+Sans:wght@200;300;400;600;700;800&display=swap');
+
+// colors
+$primary: hsl(20, 33%, 98%);
+$secondary: hsl(132, 100%, 1%);
+$accent-green: hsl(138, 25%, 56%);
+$accent-orange: hsl(32, 55%, 55%);
+
+// font weights
+$extra-light: 200;
+$light: 300;
+$regular: 400;
+$semi-bold:600;
+$bold: 700;
+$extra-bold: 800;
+
+ // font families
+$ff-lora: 'Lora', serif;
+$ff-nunito: 'Nunito Sans', sans-serif;
+
+// display
+$flex: flex;
+$grid: grid;
+
