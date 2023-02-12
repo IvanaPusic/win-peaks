@@ -10,15 +10,15 @@ services:
       - MYSQL_PASSWORD=password
   node-web:
     build:
-      context: ./backend
+      context: .././backend
       dockerfile: Dockerfile
     depends_on:
       - mysqldb
     environment:
       - DB_HOST=mysqldb
-      - DB_USER=$MYSQL_USER
-      - DB_PASSWORD=$MYSQL_PASSWORD
-      - DB_NAME=$MYSQL_DATABASE
+      - DB_USER=user
+      - DB_PASSWORD=password
+      - DB_NAME=winpeak
     ports:
       - "5000:5000"
       
