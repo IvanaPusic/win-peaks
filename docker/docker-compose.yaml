@@ -1,22 +1,24 @@
 version: '3.8'
 services:
-  database:
-    image: mongodb
+  mysqldb:
+    image: mysql:8
     restart: always
     environment:
-      - MONGO_INITDB_ROOT_USERNAME:my-root-user
-      - MONGODB_INITDB_ROOT_PASSWORD:my-root-password
-    volumes:
-      - my_data:/data/db
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=winpeak
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
   node-web:
     build:
-      context: ./node-web
+      context: ./backend
       dockerfile: Dockerfile
     depends_on:
-      - database
-    volumes:
-      - /app/node_modules
-      - ./node-web:/app
+      - mysqldb
+    environment:
+      - DB_HOST=mysqldb
+      - DB_USER=$MYSQL_USER
+      - DB_PASSWORD=$MYSQL_PASSWORD
+      - DB_NAME=$MYSQL_DATABASE
     ports:
       - "5000:5000"
       
