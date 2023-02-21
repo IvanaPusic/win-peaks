@@ -10,8 +10,7 @@ services:
       - MYSQL_PASSWORD=password
   node-web:
     build:
-      context: .././backend
-      dockerfile: Dockerfile
+      context: ./express-server
     depends_on:
       - mysqldb
     environment:
