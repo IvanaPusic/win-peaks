@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  mysqldb:
+    image: mysql:8
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=winpeak
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+  node-web:
+    build:
+      context: ./express-server
+    depends_on:
+      - mysqldb
+    environment:
+      - DB_HOST=mysqldb
+      - DB_USER=user
+      - DB_PASSWORD=password
+      - DB_NAME=winpeak
+    ports:
+      - "5000:5000"
+      
+volumes:
+  my_data:
