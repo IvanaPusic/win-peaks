@@ -1,0 +1,36 @@
+{
+  "name": "win-peaks",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "sass": "^1.58.3",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanaPusic/win-peaks.git"
+  },
+  "author": "Ivana Pusic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IvanaPusic/win-peaks/issues"
+  },
+  "homepage": "https://github.com/IvanaPusic/win-peaks#readme"
+}
