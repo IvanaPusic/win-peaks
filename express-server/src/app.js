@@ -1,4 +1,6 @@
-const express = require("express");
+// const express = require("express");
+import express from "express";
+// const express = require("express");
 const app = express();
 const mysql = require("mysql");
 
@@ -24,4 +26,9 @@ app.get("/", (req, res) => {
     res.send("Get request returned message!");
 });
 
-module.exports = app;
+const addNewDriver = (req, res) => {
+    res.status(StatusCode.OK).json("Hi from the driver");
+}
+// module.exports = app;
+
+export { addNewDriver };
