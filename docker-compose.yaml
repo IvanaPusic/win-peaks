@@ -20,6 +20,5 @@ services:
       - DB_NAME=winpeak
     ports:
       - "5000:5000"
-      
 volumes:
   my_data:

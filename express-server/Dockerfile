@@ -4,6 +4,8 @@ FROM node:18
 # The working directory inside your container
 WORKDIR /app
 
+COPY package.json /app
+
 # This will install those dependencies
 RUN npm install
 
